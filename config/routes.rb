@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  get 'bookmarks/new'
-  get 'bookmarks/edit'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "movies#home"
-  resources :movies do
-    member do
-      get :bookmarks
-    end
+  root to: "lists#index"
+  resources :lists, only: [:show, :index, :new, :create] do
+    resources :bookmarks, only: [:new, :create]
   end
+  resources :bookmarks, only: [:destroy]
 end
