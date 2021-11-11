@@ -18,7 +18,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    find_list
+    @list = List.find(params[:id])
   end
 
   def destroy
@@ -33,7 +33,4 @@ class ListsController < ApplicationController
     params.require(:list).permit(:name)
   end
 
-  def find_list
-    @list = List.find(params[:id])
-  end
 end

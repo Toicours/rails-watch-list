@@ -1,4 +1,7 @@
 <h1><%= @list.name %></h1>
-<h3><%= @list.id %></h3>
+<% @list.movies.each do |movie|%>
+<h3><%=  movie.title %></h3>
+<% end  %>
+
 
  <%= link_to "Back to homepage", lists_path%>
