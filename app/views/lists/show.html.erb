@@ -1,3 +1,5 @@
+<%= render "shared/navbar" %>
+
 <h1><%= @list.name %></h1>
 <% @list.movies.each do |movie|%>
 <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>

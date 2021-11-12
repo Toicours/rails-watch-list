@@ -1,9 +1,18 @@
-<h1>Voici une magnifique liste de types de films</h1>
+<%= render "shared/navbar" %>
 
-<ul>
-  <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list.id) %></li>
-  <% end %>
-</ul>
-
-<%= link_to "Create new list", new_list_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://entrepreneurship.babson.edu/wp-content/uploads/2020/10/Movie-1200-630.jpg);">
+  <div class="container">
+    <div class="text-center">
+      <h1>Retrouve tes <strong>films préférés</strong> en 2 clics!</h1>
+      <p>Grâce à une magnifique sélection de listes</p>
+      <%= link_to "Create new list", new_list_path, class: "btn btn-gradient" %>
+      </div>
+  </div>
+</div>
+<div class="container mx-3" >
+  <ul>
+    <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list.id) %></li>
+    <% end %>
+  </ul>
+</div>
