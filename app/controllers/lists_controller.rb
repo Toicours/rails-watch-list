@@ -18,10 +18,9 @@ class ListsController < ApplicationController
   end
 
   def show
+    @bookmark = Bookmark.new
     @list = List.find(params[:id])
     # definir instance bookmark afin de pouvoir y accéder
-    @bookmark = Bookmark.new
-
   end
 
   def destroy
