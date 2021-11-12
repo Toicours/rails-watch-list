@@ -9,4 +9,6 @@
 
 <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
 
+ <%= link_to "delete this list", list_path(@list), method: :delete, data: { confirm: "Are you sure you want to delete this list?" } %>
+
  <%= link_to "Back to homepage", lists_path %>
