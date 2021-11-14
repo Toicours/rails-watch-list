@@ -1,11 +1,28 @@
+.movie-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  opacity: .8;
+
+    a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 400px;
-  width: 550px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  height: 450px;
+  width: 600px;
 }
 
 .card-trip > img {
@@ -28,10 +45,6 @@
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
 }
 
 .card-trip-infos .card-trip-user {
